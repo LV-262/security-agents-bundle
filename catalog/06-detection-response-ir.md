@@ -8,7 +8,7 @@ is a heavier discipline left to a later entry.
 ### incident-response · skill
 Production-incident response. Triage runbooks, severity classification, containment,
 eradication, and recovery checklists, on-call handoff, and blameless postmortems.
-Planned.
+Install: `skills/incident-response/`
 
 ### From the ecosystem
 A full incident-response bundle (runbooks, on-call handoff, postmortem writing) and

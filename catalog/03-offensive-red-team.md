@@ -7,10 +7,9 @@ targeting.
 
 ### red-team-review · agent
 Offensive review of code and systems: attack-path enumeration, exploit-scenario
-reasoning, abuse cases. Ships a `PreToolUse` hook that blocks Write, Edit, and Bash,
-so a review runs against real systems without touching them. Declines destructive,
-DoS, and mass-targeting requests.
-Planned.
+reasoning, abuse cases. Holds no Write or Edit tools, so a review runs against real
+systems without changing them. Declines destructive, DoS, and mass-targeting requests.
+Install: `agents/red-team-review.md`
 
 ### From the ecosystem
 Deep offensive tooling already exists as skills worth installing from source: Burp

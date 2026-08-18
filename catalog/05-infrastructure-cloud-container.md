@@ -7,7 +7,7 @@ container configuration.
 Reviews IaC, cloud posture, and container hardening. Terraform, K8s manifests and
 Helm, Dockerfiles; CIS-benchmark alignment; CSPM and WAF review; network and identity
 misconfig, public exposure, and over-broad IAM across AWS, Azure, and GCP.
-Planned.
+Install: `agents/infrastructure-security-engineer.md`
 
 ### From the ecosystem
 A consolidated `security-engineer` persona plus cloud-posture, WAF, K8s, and Terraform

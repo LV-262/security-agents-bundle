@@ -8,12 +8,12 @@ hits closest to home, since a Claude Code harness is itself an agent system.
 Reviews AI-agent systems for security flaws. Prompt-injection paths (untrusted tool
 output reaching context, hook injection, subagent prompt boundaries), MCP-server audit
 (tool surface, auth, over-broad scopes), and an OWASP-for-agents baseline.
-Planned.
+Install: `agents/ai-agent-security.md`
 
 ### security-scan · skill
 Audits a `.claude/` configuration for misconfiguration and injection risk: settings,
 MCP servers, hooks, agent definitions.
-Planned.
+Install: `skills/security-scan/`
 
 ### From the ecosystem
 MCP-server auditors, a prompt-injection red-team persona, and an OWASP-for-agents
