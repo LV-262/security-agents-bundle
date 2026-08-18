@@ -1,8 +1,8 @@
 # 7. AI / Agent Security
 
 Securing AI agents and the harnesses that run them: prompt injection, tool-surface
-abuse, and MCP-server exposure. The fastest-emerging and least-saturated branch —
-and directly relevant, since a Claude Code harness *is* an agent system.
+abuse, MCP-server exposure. The newest branch and the thinnest on the open web. It
+hits closest to home, since a Claude Code harness is itself an agent system.
 
 ## Entries
 
@@ -11,18 +11,17 @@ and directly relevant, since a Claude Code harness *is* an agent system.
 - **Harness-runnable:** yes
 - **Kind:** agent
 - **Source:** `agents/ai-agent-security.md`
-- **Purpose:** reviews AI-agent systems for security flaws — prompt-injection paths (untrusted tool output flowing into context, hook injection, subagent prompt boundaries), MCP-server audit (tool surface, auth, over-broad scopes), and an OWASP-for-agents baseline. One entry, not split.
+- **Purpose:** reviews AI-agent systems for security flaws. Prompt-injection paths (untrusted tool output reaching context, hook injection, subagent prompt boundaries), MCP-server audit (tool surface, auth, over-broad scopes), and an OWASP-for-agents baseline.
 
 ### security-scan
-- **Status:** reuse (rewritten from scratch; earlier version was ECC-derived)
+- **Status:** reuse (rewritten, MIT-original)
 - **Harness-runnable:** yes
 - **Kind:** skill
 - **Source:** `skills/security-scan/`
-- **Purpose:** audits a `.claude/` configuration for misconfiguration and injection risk — settings, MCP servers, hooks, agent definitions.
+- **Purpose:** audits a `.claude/` configuration for misconfiguration and injection risk. Settings, MCP servers, hooks, agent definitions.
 
 ### Curated
-- **mcp-security-audit** / **mcp-implementation-security-review** (Copilot) — MCP-server auditors. Pointers.
-- **llm-redteam-specialist** (davila7 / wshobson) — prompt-injection red-team persona. Pointer.
-- **agent-owasp-compliance** (Copilot) — OWASP-for-agents conformance. Pointer.
 
-See [curated/](../curated/) for links and licenses.
+MCP-server auditors, a prompt-injection red-team persona, and an OWASP-for-agents
+conformance check. Every pick is MIT, with little competition yet. Picks and licenses
+in [curated/](../curated/#7-ai--agent-security).

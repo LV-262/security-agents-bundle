@@ -1,9 +1,9 @@
 # 6. Detection & Response / Incident Response
 
 Reacting to security and reliability incidents: triage, containment, recovery, and
-learning. Scoped to production-incident IR — the SRE-flavored path (diagnose →
-contain → fix → postmortem), not forensic DFIR (timeline reconstruction,
-chain-of-custody, evidence integrity).
+the postmortem that closes the loop. This branch runs the production-incident path,
+diagnose through write-up. Deep forensic work (chain-of-custody, evidence integrity)
+is a heavier discipline left to a later entry.
 
 ## Entries
 
@@ -12,11 +12,11 @@ chain-of-custody, evidence integrity).
 - **Harness-runnable:** yes
 - **Kind:** skill
 - **Source:** `skills/incident-response/`
-- **Purpose:** production-incident response — triage runbooks, severity classification, containment / eradication / recovery checklists, on-call handoff patterns, blameless postmortem writing. Light threat-intel enrichment folded in.
-- **Not in scope:** forensic DFIR (chain-of-custody, IOC handling). Noted as a candidate for a future forensic entry.
+- **Purpose:** production-incident response. Triage runbooks, severity classification, containment / eradication / recovery checklists, on-call handoff, blameless postmortems. Light threat-intel enrichment.
 
 ### Curated
-- **Detection engineering** (Sigma rules, alert tuning) — pointer, TBD from research. (Rare in coding-agent collections; cataloged for completeness.)
-- **Incident-response runbook/postmortem** reference skills — TBD from research.
 
-See [curated/](../curated/) for links and licenses.
+A full incident-response bundle (runbooks, on-call handoff, postmortem writing) and
+the regulatory-reporting skills most IR agents skip. Detection engineering has no
+open-source pointer yet. Picks and licenses in
+[curated/](../curated/#6-detection--response--incident-response).

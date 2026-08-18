@@ -14,7 +14,7 @@ name: <lowercase-hyphenated>          # required
 description: <what + WHEN; front-load the trigger>   # required; drives auto-delegation
 tools: Read, Grep, Glob, Bash         # allowlist; omit = inherit ALL. Least-privilege.
 model: inherit                        # inherit (default) | opus | sonnet | haiku | fable | full id
-disallowedTools: Write, Edit          # denylist (applied before tools) — enforce read-only
+disallowedTools: Write, Edit          # denylist (applied before tools); enforce read-only
 hooks: { PreToolUse: [...] }          # hard boundary enforcement (read-only-auditor pattern)
 effort: high                          # per-agent reasoning budget
 skills: [stride-analysis-patterns]    # preload paired reference skills
@@ -33,7 +33,7 @@ skills: [stride-analysis-patterns]    # preload paired reference skills
 <Numbered steps the agent follows. The spine. 6-9 steps.>
 
 ## Finding / issue catalog
-<The domain checklist grouped by class. Canonical examples, one per class — NOT an
+<The domain checklist grouped by class. Canonical examples, one per class, NOT an
  exhaustive edge-case dump.>
 
 ## Output format
@@ -45,22 +45,22 @@ skills: [stride-analysis-patterns]    # preload paired reference skills
 
 ## Sizing rule
 
-The target is "the smallest set of high-signal tokens that get the outcome" — minimal,
-not short. Practical bounds for this catalog:
+Aim for the smallest set of high-signal tokens that gets the outcome. Dense beats both
+bloated and bare. Practical bounds for this catalog:
 
 - Agent body under ~1,500 words / ~200 lines: a numbered workflow plus a bounded finding
   catalog. Below that, a security agent reverts to generic review (no catalog, no rubric).
   Above that, it fights the model.
 - Push deep, reusable reference material into paired **skills** loaded on demand. A subagent
   body is a per-invocation cost in a fresh context; a skill body "stays in context across
-  turns," so every line there is a recurring cost — keep both lean, but skills leaner.
+  turns," so every line there is a recurring cost. Keep both lean, skills leanest.
 - Canonical examples over exhaustive lists. A `security-reviewer`'s OWASP catalog is
   canonical classes with one example each, not every CWE variant.
 
 ## Do / Don't (security-reviewer-style agents)
 
 - Front-load the trigger in `description` (it plus `when_to_use` is truncated at ~1,536
-  chars in the listing). Don't bury "when to use" or write it vague — weak descriptions
+  chars in the listing). Don't bury "when to use" or write it vague, and weak descriptions
   kill auto-delegation.
 - Least-privilege `tools`, and enforce read-only with `disallowedTools` + a `PreToolUse`
   hook. Don't inherit every tool; a reviewer that can Write/Edit is a footgun.
@@ -84,7 +84,7 @@ not short. Practical bounds for this catalog:
 - `model` defaults to `inherit` and accepts `fable` + next-gen ids (`claude-opus-5`,
   `claude-sonnet-5`) alongside aliases. Resolution: `CLAUDE_CODE_SUBAGENT_MODEL` env →
   per-invocation param → frontmatter → main conversation.
-- Commands merged into skills — ship new work as **skills**, not commands (skills support
+- Commands merged into skills, so ship new work as **skills**, not commands (skills support
   supporting files and auto-loading).
 - Skills frontmatter now includes `when_to_use`, `allowed-tools`, `disallowed-tools`,
   `license`, `compatibility`, `metadata`. Favor just-in-time retrieval: keep lightweight

@@ -1,8 +1,7 @@
 # Catalog Overview
 
-The security-engineering discipline, cut into seven teachable branches. Each branch
-file lists its entries as cards. GRC/compliance is a separate sibling discipline,
-out of scope here.
+Security engineering, cut into seven branches. Each branch file lists its entries as
+cards.
 
 ## Branches
 
@@ -14,20 +13,18 @@ out of scope here.
 6. [Detection & Response / Incident Response](06-detection-response-ir.md)
 7. [AI / Agent Security](07-ai-agent-security.md)
 
-Cross-cut: [Enforcement](../enforcement/) (guardrails + hooks).
+Cross-cut: [Enforcement](../enforcement/) (guardrails and hooks).
 
 ## Card legend
 
 Each entry states:
 
-- **Status** — `build` (original here), `reuse` (rewritten original), `curate` (external pointer).
-- **Harness-runnable** — `yes` / `no`.
-- **Kind** — agent / skill / hook / reference.
-- **Source** — repo path, or external URL + license.
+- Status: `build` (original here), `reuse` (rewritten original), `curate` (lives in another repo).
+- Harness-runnable: `yes` / `no`.
+- Kind: agent / skill / hook / reference.
+- Source: a repo path, or an external repo and its license.
 
-## Status of population
+## Status
 
-The branch files below are seeded with the locked roster. Entries marked
-`build` / `reuse` are authored in this repo; `curate` entries and their licenses
-are filled from the curation research pass (see the epic's research issue). An
-`entry: TBD` line marks a slot awaiting that pass.
+Some entries are live and installable now; others are still being written. Each
+card's Status line says which.

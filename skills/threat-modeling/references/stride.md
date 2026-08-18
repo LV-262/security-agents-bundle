@@ -36,6 +36,6 @@ STRIDE categories don't all apply to every element type. Use this to avoid noise
 - **Spoofing:** token replay if tokens are long-lived and not bound to a session. Mitigate with short expiry + rotation.
 - **Tampering:** request body altered if integrity isn't checked past the gateway. Mitigate with signed requests or mutual TLS internally.
 - **Information disclosure:** verbose 500s leak stack traces. Mitigate with generic error bodies + server-side detail only.
-- **Elevation of privilege:** IDOR — `/orders/{id}` returns another tenant's order. Mitigate with per-request ownership checks, not just authentication.
+- **Elevation of privilege:** IDOR: `/orders/{id}` returns another tenant's order. Mitigate with per-request ownership checks, not just authentication.
 
 Residual after mitigation: token theft within the expiry window remains; accept and monitor.

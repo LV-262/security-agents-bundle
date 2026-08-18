@@ -1,8 +1,7 @@
 # Enforcement
 
-The "how to enforce" cross-cut — operational guardrails and hooks that make security
-posture structural rather than advisory. Not a domain branch; it applies across all
-seven. Optional for the workshop, valuable in a real harness.
+Guardrails and hooks that make a harness enforce its own security posture instead of
+trusting an agent to remember it. These apply across all seven branches.
 
 ## Entries
 
@@ -25,14 +24,14 @@ seven. Optional for the workshop, valuable in a real harness.
 ### Frontmatter-hook read-only enforcement
 - **Status:** reference (document, not shipped)
 - **Kind:** reference
-- **Purpose:** a subagent can declare `hooks.PreToolUse` (and `disallowedTools`) in its
-  frontmatter to block `Write`/`Edit`/`MultiEdit`/`Bash` at the harness level — a
-  structural non-destructive guarantee, not a prose promise. Adopted by the Red Team
-  and audit entries. Modeled on the open-web `read-only-auditor` pattern (see `curated/`).
+- **Purpose:** a subagent declares `hooks.PreToolUse` (and `disallowedTools`) in its
+  frontmatter to block `Write`/`Edit`/`MultiEdit`/`Bash` at the harness level, so the
+  harness enforces the block directly. The Red Team and audit entries use it. Modeled
+  on the open-source `read-only-auditor` pattern (see `curated/`).
 
 ### Config self-modification protection
 - **Status:** reference (document, not shipped)
 - **Kind:** reference
 - **Purpose:** a `PreToolUse` hook that blocks an agent from editing its own governance
-  (settings, identity, agent/hook definitions). Documents the pattern; the concrete
-  hook lives in the operator's own harness config, not this bundle.
+  (settings, identity, agent/hook definitions). The concrete hook lives in each
+  operator's harness config; this documents the pattern to copy.

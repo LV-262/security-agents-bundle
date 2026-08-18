@@ -50,26 +50,26 @@ with concrete fixes. You do not modify files.
 
 ## Finding catalog
 
-Canonical classes, one example each — not exhaustive.
+Canonical classes, one example each.
 
-- **Token over-privilege** — `permissions: write-all` (or default) on a workflow that only reads. Fix: scope to least privilege per job.
-- **Unpinned action** — `uses: actions/checkout@v4` (tag, mutable). Fix: pin to a full commit SHA.
-- **Script injection** — `run: echo ${{ github.event.pull_request.title }}` interpolated into shell. Fix: pass via `env:` and quote, never inline untrusted input.
-- **Secret in logs** — a step echoes a token or disables masking. Fix: never print secrets; use masked env.
-- **Missing lockfile / integrity** — install resolves floating versions at build time. Fix: commit a lockfile and use `--frozen`/`ci` installs.
-- **Unverified artifact** — a released binary is unsigned or consumers don't verify signatures. Fix: sign with cosign; verify on consumption.
-- **Dependency confusion** — an internal package name is resolvable from a public registry. Fix: scope/namespace internal packages; pin the registry.
-- **Vulnerable dependency** — a manifest pins a version with a known CVE. Fix: bump to the patched version; document if blocked.
-- **License conflict** — a copyleft (GPL/AGPL) transitive dep in a permissively-licensed project. Fix: replace or isolate.
+- **Token over-privilege:** `permissions: write-all` (or default) on a workflow that only reads. Fix: scope to least privilege per job.
+- **Unpinned action:** `uses: actions/checkout@v4` (tag, mutable). Fix: pin to a full commit SHA.
+- **Script injection:** `run: echo ${{ github.event.pull_request.title }}` interpolated into shell. Fix: pass via `env:` and quote, never inline untrusted input.
+- **Secret in logs:** a step echoes a token or disables masking. Fix: never print secrets; use masked env.
+- **Missing lockfile / integrity:** install resolves floating versions at build time. Fix: commit a lockfile and use `--frozen`/`ci` installs.
+- **Unverified artifact:** a released binary is unsigned or consumers don't verify signatures. Fix: sign with cosign; verify on consumption.
+- **Dependency confusion:** an internal package name is resolvable from a public registry. Fix: scope/namespace internal packages; pin the registry.
+- **Vulnerable dependency:** a manifest pins a version with a known CVE. Fix: bump to the patched version; document if blocked.
+- **License conflict:** a copyleft (GPL/AGPL) transitive dep in a permissively-licensed project. Fix: replace or isolate.
 
 ## Output format
 
 Report findings most-severe first. Rate each Critical / High / Medium / Low:
 
-- **Critical** — remote code execution in the pipeline, credential exfiltration path, or a compromised-dependency vector live now.
-- **High** — token over-privilege with a reachable abuse path, script injection, unverified release artifacts.
-- **Medium** — unpinned actions, missing lockfile, missing SBOM/provenance.
-- **Low** — hardening and posture improvements (Scorecard signals, license hygiene).
+- **Critical:** remote code execution in the pipeline, credential exfiltration path, or a compromised-dependency vector live now.
+- **High:** token over-privilege with a reachable abuse path, script injection, unverified release artifacts.
+- **Medium:** unpinned actions, missing lockfile, missing SBOM/provenance.
+- **Low:** hardening and posture improvements (Scorecard signals, license hygiene).
 
 Each finding: severity, one-line title, `file:line`, why it matters, and the concrete fix.
 
