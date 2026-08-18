@@ -2,9 +2,8 @@
 
 A catalog of security-engineering agents and skills for Claude Code, organized the
 way a security team is: by discipline. Built to teach from and to install from.
-Reuse what fits, point at the best open-source work, build what's missing.
 
-Successor to `security-agents-bundle`. MIT (see [LICENSE](LICENSE)).
+MIT (see [LICENSE](LICENSE)).
 
 ## The catalog
 
@@ -20,18 +19,9 @@ Seven branches. Each is a slice of security engineering with its own entries.
 | 6 | Detection & Response / IR | incident runbooks, on-call, postmortems, detection eng | [catalog/06](catalog/06-detection-response-ir.md) |
 | 7 | AI / Agent Security | prompt injection, MCP-server audit, OWASP-for-agents | [catalog/07](catalog/07-ai-agent-security.md) |
 
-[Enforcement](enforcement/) holds the guardrails and hooks that keep a harness to
-its own rules. [curated/](curated/) points at the best security work already
-published across the ecosystem.
-
-## Reading an entry
-
-Every entry is a card:
-
-- Status: `build` (original here), `reuse` (rewritten original), `curate` (lives in another repo).
-- Harness-runnable: `yes` (install and invoke it) or `no` (reference only).
-- Kind: agent, skill, or hook.
-- Source: a path in this repo, or an external repo and its license.
+[Enforcement](enforcement/) holds the guardrails and hooks that keep a harness to its
+own rules. [curated/](curated/) points at the best security work already published
+across the ecosystem.
 
 ## Install
 
@@ -42,14 +32,14 @@ cp -R agents/*  ~/.claude/agents/
 cp -R skills/*  ~/.claude/skills/
 ```
 
-Take what you need. Each branch lists its runnable entries.
+Take what you need. Each branch lists what it ships and where.
 
 ## The security team
 
 A subset of these compose into an agentic security team. That orchestration is the
-next build. Today each runnable entry stands on its own.
+next build. Today each entry stands on its own.
 
 ## Attribution
 
-See [ATTRIBUTION.md](ATTRIBUTION.md). Curated entries keep their upstream licenses;
-everything original here is MIT.
+See [ATTRIBUTION.md](ATTRIBUTION.md). Everything original here is MIT; curated entries
+keep their upstream licenses.

@@ -5,18 +5,12 @@ the postmortem that closes the loop. This branch runs the production-incident pa
 diagnose through write-up. Deep forensic work (chain-of-custody, evidence integrity)
 is a heavier discipline left to a later entry.
 
-## Entries
+### incident-response · skill
+Production-incident response. Triage runbooks, severity classification, containment,
+eradication, and recovery checklists, on-call handoff, and blameless postmortems.
+Planned.
 
-### incident-response
-- **Status:** build
-- **Harness-runnable:** yes
-- **Kind:** skill
-- **Source:** `skills/incident-response/`
-- **Purpose:** production-incident response. Triage runbooks, severity classification, containment / eradication / recovery checklists, on-call handoff, blameless postmortems. Light threat-intel enrichment.
-
-### Curated
-
+### From the ecosystem
 A full incident-response bundle (runbooks, on-call handoff, postmortem writing) and
 the regulatory-reporting skills most IR agents skip. Detection engineering has no
-open-source pointer yet. Picks and licenses in
-[curated/](../curated/#6-detection--response--incident-response).
+open-source pointer yet. See [curated/](../curated/#6-detection--response--incident-response).

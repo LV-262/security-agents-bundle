@@ -1,9 +1,6 @@
 # Catalog Overview
 
-Security engineering, cut into seven branches. Each branch file lists its entries as
-cards.
-
-## Branches
+Security engineering, cut into seven branches.
 
 1. [Application Security](01-application-security.md)
 2. [Product Security & Threat Modeling](02-product-security-threat-modeling.md)
@@ -15,16 +12,6 @@ cards.
 
 Cross-cut: [Enforcement](../enforcement/) (guardrails and hooks).
 
-## Card legend
-
-Each entry states:
-
-- Status: `build` (original here), `reuse` (rewritten original), `curate` (lives in another repo).
-- Harness-runnable: `yes` / `no`.
-- Kind: agent / skill / hook / reference.
-- Source: a repo path, or an external repo and its license.
-
-## Status
-
-Some entries are live and installable now; others are still being written. Each
-card's Status line says which.
+Each branch lists its entries with what they do and where to install from. Entries
+marked *planned* are still being written. External picks worth installing from source
+are collected in [curated/](../curated/).
