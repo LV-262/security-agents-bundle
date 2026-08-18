@@ -16,7 +16,9 @@ agent against the fixture and score its findings against this list.
 1. Public storage: S3 bucket ACL `public-read`.
 2. Open ingress: security group allows `0.0.0.0/0` on port 22 (SSH).
 3. Wildcard IAM: policy with `Action: "*"` on `Resource: "*"`.
-4. (Bonus) Missing encryption at rest on the bucket.
+4. Missing `aws_s3_bucket_public_access_block` (the guardrail that would stop the public ACL).
+5. (Hardening) No customer-managed KMS key. New buckets default to SSE-S3, so this is a
+   hardening recommendation, not a cleartext-storage gap — score a Low here, not a miss.
 
 ## app.py → security-reviewer
 
